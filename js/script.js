@@ -6,7 +6,7 @@ function renderProduct(arr) {
     for (var i = 0; i < arr.length; i++) {
         var productServer = arr[i]
         content += `
-        <div class="col-4">
+        <div class="col-12 col-sm-6 col-md-4">
                 <div class="product-card">
                     <a href="#" class="product-card__link-overlay"></a>
                     <div class="product-card__image-box">
