@@ -27,7 +27,7 @@
 <body>
     <header class="header">
         <div class="header__top">
-            <div class="container-xxl">
+            <div class="container-lg">
                 <div class="header__top-content">
                     <ul class="header__user-menu">
                         <li class="header__user-item">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="header__bottom container-xxl">
+        <div class="header__bottom container-lg">
             <!-- <div class=""> -->
             <div class="header__bottom-content">
                 <a href="#" class="header__logo-link">
@@ -145,6 +145,63 @@
                             </svg>
                         </a>
                     </div>
+                    <div class="header__icon-box">
+                        <a class="header__icon-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight">
+                            <svg class="header__icon" height="384pt" viewBox="0 -53 384 384" width="384pt"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+                                <path
+                                    d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+                                <path
+                                    d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                        aria-labelledby="offcanvasRightLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="offcanvas-nav">
+                                <li class="offcanvas-nav-item">
+                                    <a href="" class="offcanvas-nav-link">New & Featured
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="offcanvas-nav-item">
+                                    <a href="" class="offcanvas-nav-link offcanvas-nav-link--active">Men
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="offcanvas-nav-item">
+                                    <a href="" class="offcanvas-nav-link">Women
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="offcanvas-nav-item">
+                                    <a href="" class="offcanvas-nav-link">Kids
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                                <li class="offcanvas-nav-item">
+                                    <a href="" class="offcanvas-nav-link">Sales
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="offcanvas-button-box">
+                                <a href="" class="button button--outline button--outline-1">Join Us</a>
+                                <a href="" class="button button--black button--black-1">Sign Up</a>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -154,7 +211,7 @@
     </header>
     <main>
         <section class="section-product-list">
-            <div class="container-xxl">
+            <div class="container-lg">
                 <div class="filter">
                     <h1 class="filter__product-category">
                         Men's Shoes
@@ -169,88 +226,77 @@
                     </select>
                 </div>
 
-                <div class="products row">
-                    <!-- <div class="col-4">
-                        <div class="product-card">
-                            <a href="#" class="product-card__link-overlay">
-                            </a>
-                            <div class="product-card__image-box">
-                                <img src="./img/shoes-1.webp" alt="shoes" class="product-card__image">
-                            </div>
-                            <div class="product-card__info">
-                                <h2 class="product-card__title">Alphabounce RC 2.0</h2>
-                                <p class="product-card__subtitle">Men's Shoes</p>
-                                <p class="product-card__short-desc">Short description</p>
-                                <p class="product-card__price">$219</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="products row"></div>
+
         </section>
     </main>
     <footer class="footer">
-        <div class="container-xxl">
+        <div class="container-lg">
             <div class="footer__nav">
                 <div class="row">
-                    <div class="col-2">
-                        <ul class="footer__list footer__list--1">
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">Find a store</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">Become a member</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">Student discounts</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">Feedback</a>
-                            </li>
-                        </ul>
+                    <div class="col-sm-9 col-md-8">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <ul class="footer__list footer__list--1">
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">Find a store</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">Become a member</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">Student discounts</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">Feedback</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">Get Help</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Order Status</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Delivery</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Returns</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Payment Options</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <ul class="footer__list">
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--header">About Nike</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">News</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Careers</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Investors</a>
+                                    </li>
+                                    <li class="footer__item">
+                                        <a href="#" class="footer__link footer__link--main">Sustainability</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">Get Help</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Order Status</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Delivery</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Returns</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Payment Options</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-2">
-                        <ul class="footer__list">
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--header">About Nike</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">News</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Careers</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Investors</a>
-                            </li>
-                            <li class="footer__item">
-                                <a href="#" class="footer__link footer__link--main">Sustainability</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-6">
+
+                    <div class="col-sm-3 col-md-4">
                         <div class="footer__icon-group">
                             <i class="fab fa-twitter footer__icon"></i>
                             <i class="fab fa-facebook-f footer__icon"></i>

@@ -1,9 +1,10 @@
+//FONT
+$default-font-size: 1.6rem;
+
 body {
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
     line-height: 1.7;
     color: var(--color-gray-12);
+    font-size: $default-font-size;
 }
-
-//FONT
-$default-font-size: 1.6rem;
