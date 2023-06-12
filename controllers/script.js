@@ -1,5 +1,6 @@
 'use strict'
 
+// Hàm render product
 function renderProduct(arr) {
     var content = "";
 
@@ -26,6 +27,7 @@ function renderProduct(arr) {
     document.querySelector('.products').innerHTML = content;
 }
 
+// Hàm gọi API để lấy product
 function getProduct() {
     var promise = axios({
         url: "https://shop.cyberlearn.vn/api/Product",
@@ -43,3 +45,48 @@ function getProduct() {
 }
 
 getProduct()
+
+// Hàm đăng ký người dùng
+const signUp = function () {
+    let user = getData();
+
+    let promise = axios({
+        url: "https://shop.cyberlearn.vn/api/Users/signup",
+        method: "POST",
+        data: user,
+    });
+
+    const toastContent = document.querySelector('.toast');
+    const toast = new bootstrap.Toast(toastContent);
+    const toastBody = document.querySelector('.toast-body');
+
+    promise.then(function (res) {
+        console.log(res)
+
+        toastBody.textContent = res.data.message;
+        
+        toastContent.classList.add('text-black');
+        toastContent.classList.add('bg-white');
+
+        toast.show();
+
+        document.querySelector('.form').reset();
+    })
+    promise.catch(function (err) {
+        console.log(err)
+
+        if(err.message === 'Request failed with status code 400') {
+            toastBody.textContent = `Email đã được sử dụng.`
+    
+            toastContent.classList.add('text-white');
+            toastContent.classList.add('bg-danger');
+        
+            toast.show();
+        }
+    })
+}
+
+getEle('btnSignUp').addEventListener('click', signUp)
+
+
+
