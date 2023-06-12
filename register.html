@@ -37,7 +37,7 @@
                             <a href="" class="header__user-link">Help</a>
                         </li>
                         <li class="header__user-item">
-                            <a href="./register.html" class="header__user-link">Sign Up</a>
+                            <a href="" class="header__user-link">Sign Up</a>
                         </li>
                         <li class="header__user-item">
                             <a href="" class="header__user-link">Sign In</a>
@@ -49,7 +49,7 @@
         <div class="header__bottom container-lg">
             <!-- <div class=""> -->
             <div class="header__bottom-content">
-                <a href="#" class="header__logo-link">
+                <a href="./index.html" class="header__logo-link">
                     <svg class="header__logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                         style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -109,7 +109,7 @@
                         <a href="" class="header__nav-link">New & Featured</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="" class="header__nav-link header__nav-link--active">Men</a>
+                        <a href="" class="header__nav-link">Men</a>
                     </li>
                     <li class="header__nav-item">
                         <a href="" class="header__nav-link">Women</a>
@@ -174,7 +174,7 @@
                                     </a>
                                 </li>
                                 <li class="offcanvas-nav-item">
-                                    <a href="" class="offcanvas-nav-link offcanvas-nav-link--active">Men
+                                    <a href="" class="offcanvas-nav-link">Men
                                         <i class="fa fa-angle-right"></i>
                                     </a>
                                 </li>
@@ -199,7 +199,7 @@
                                 <a href="" class="button button--outline button--outline-1">Sign Up</a>
                                 <a href="" class="button button--black button--black-1">Sign In</a>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -209,27 +209,130 @@
 
         </div>
     </header>
-    <main>
-        <section class="section-product-list">
-            <div class="container-lg">
-                <div class="filter">
-                    <h1 class="filter__product-category">
-                        Men's Shoes
-                    </h1>
+    <main class="position-relative">
+        <section class="section-register">
+            <div class="register__form">
+                <form action="" class="form">
+                    <div class="register__form-header">
+                        <svg class="register__logo" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                            style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <polygon points="428.384,263.232 335.936,109.472 297.856,132.384 237.376,168.736 297.856,269.44 377.696,402.528 
+			428.384,402.528 512,402.528 		" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <polygon points="297.856,347.744 217.312,213.728 121.888,271.168 118.624,273.088 121.888,278.496 196.416,402.528 
+			297.856,402.528 330.624,402.528 		" />
+                                </g>
+                            </g>
+                            <g>
+                                <g>
+                                    <polygon
+                                        points="121.888,356.704 98.656,318.112 0,377.376 15.072,402.528 121.888,402.528 149.376,402.528 		" />
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                        <h1 class="register__heading">Become a Member</h1>
+                        <p class="register__subheading">Create your Member profile and get first access to the very best
+                            of our products, inspiration and community.</p>
+                    </div>
 
-                    <select class="filter__product-sort form-select">
-                        <option selected>Sort by</option>
-                        <option value="1">Featured</option>
-                        <option value="2">Newest</option>
-                        <option value="3">Price: High-Low</option>
-                        <option value="3">Price: Low-High</option>
-                    </select>
-                </div>
+                    <div class="mb-4">
+                        <input type="email" class="form-control" id="email" placeholder="Email address" required>
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
 
-                <div class="products row"></div>
+                    <div class="mb-4">
+                        <input type="password" class="form-control" id="password" placeholder="Password" required>
+                        <div id="passwordHelp" class="form-text"></div>
+                    </div>
 
+                    <div class="mb-4">
+                        <input type="password" class="form-control" id="passwordConfirm"
+                            placeholder="Password confirmation" required>
+                        <div id="passwordConfirmHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        <div id="nameHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone number" required>
+                        <div id="phoneHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class=" d-flex justify-content-between">
+                            <input type="radio" class="btn-check gender" name="gender" id="male" autocomplete="off"
+                                value="male">
+                            <label class="button button--outline button--outline-rec me-4" for="male">Male</label>
+
+                            <input type="radio" class="btn-check gender" name="gender" id="female" autocomplete="off"
+                                value="female">
+                            <label class="button button--outline button--outline-rec" for="female">Female</label>
+                        </div>
+
+                        <div id="genderHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-4">
+                        <button class="button button--black button--black-rec" type="button" id="btnSignUp">Sign
+                            Up</button>
+                    </div>
+                </form>
+            </div>
         </section>
+
+        <!-- Toast -->
+        <div class="toast-container top-0 end-0 p-5">
+            <div class="toast align-items-center border-0 fs-4" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body p-3">
+                    </div>
+                    <button type="button" class="btn-close me-3 m-auto fs-5" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
     </main>
+
     <footer class="footer">
         <div class="container-lg">
             <div class="footer__nav">
@@ -323,7 +426,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Main JS -->
-
+    <script src="./models/User.js"></script>
+    <script src="./controllers/helper.js"></script>
     <script src="./controllers/validator.js"></script>
     <script src="./controllers/script.js"></script>
 </body>
