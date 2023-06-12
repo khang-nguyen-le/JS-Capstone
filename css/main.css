@@ -390,4 +390,28 @@ body {
 .filter__product-sort:focus {
   border-color: var(--color-gray-12);
   box-shadow: 0 0 0 0.25rem var(--color-gray-12);
+}
+
+.section-product-detail {
+  padding: 6rem 0;
+}
+
+.detail_display .col-7 {
+  text-align: center;
+}
+.detail_display .col-5 .product-card__size {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  justify-content: center;
+}
+.detail_display .col-5 .product-card__size .product-card__size {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px gray solid;
+  transition: all 0.5s;
+}
+.detail_display .col-5 .product-card__size .product-card__size:hover {
+  cursor: pointer;
+  border: 1px black solid;
 }/*# sourceMappingURL=main.css.map */
