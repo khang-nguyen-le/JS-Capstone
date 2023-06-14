@@ -50,11 +50,11 @@ function renderProductById(arr) {
                             </div>
                             <button class="btn-primary-dark">Add to bag</button>
                             <button class="btn-secondary">Favourite</button>
-                            <ul>
-                            <li class="product-card__short-desc">* ${arr.description}</li>
-                            <li class="product-card__short-desc">* Colour Shown: White/Black/White/Smoke Grey</li>
-                            <li class="product-card__short-desc">* Alias: ${arr.alias}</li>
-                            <li class="product-card__short-desc">* Quantity: ${arr.quantity}</li>
+                            <ul class="product-list_item">
+                                <li class="product-card__short-desc">${arr.description}</li>
+                                <li class="product-card__short-desc">Colour Shown: White/Black/White/Smoke Grey</li>
+                                <li class="product-card__short-desc">Alias: ${arr.alias}</li>
+                                <li class="product-card__short-desc">Quantity: ${arr.quantity}</li>
                             </ul>
                         </div>
                     </div>
@@ -73,9 +73,10 @@ function renderProductById(arr) {
 }
 
 
-function getProductById() {
+function getProductById(id) {
+    let urlLink = "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id;
     var promise = axios({
-        url: "https://shop.cyberlearn.vn/api/Product/getbyid?id=1",
+        url: urlLink,
         method: "GET",
         // responseType: "JSON"
     })
@@ -89,4 +90,4 @@ function getProductById() {
     })
 }
 
-getProductById();
+// getProductById(1);

@@ -456,9 +456,9 @@ body {
   box-shadow: 0 0 0 0.25rem var(--color-gray-12);
 }
 
-<<<<<<< HEAD
 .section-product-detail {
   padding: 3.5rem;
+  margin: 50px;
 }
 
 .detail_display .col-7 {
@@ -483,6 +483,12 @@ body {
 .detail_display .col-5 .product-card__size .product-card__detail:hover {
   cursor: pointer;
   border: 1px black solid;
+}
+.detail_display .col-5 ul.product-list_item {
+  list-style: circle;
+  list-style-position: inside;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 .detail_display .related_list {
   margin: 20px;
@@ -522,8 +528,8 @@ body {
   cursor: pointer;
   opacity: 0.7;
   border: 1px black solid;
-=======
+}
+
 .section-register {
   padding: 4rem 0;
->>>>>>> master
 }/*# sourceMappingURL=main.css.map */

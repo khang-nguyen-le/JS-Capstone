@@ -1,5 +1,6 @@
 .section-product-detail {
     padding: 3.5rem;
+    margin: 50px;
 }
 .detail_display {
     .col-7 {
@@ -25,7 +26,13 @@
                     border: 1px black solid;
                 }
             }
-        }  
+        }
+        ul.product-list_item {
+            list-style : circle;
+            list-style-position: inside;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
     }
     .related_list{
         margin: 20px; 
