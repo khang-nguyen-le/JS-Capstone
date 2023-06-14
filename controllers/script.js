@@ -8,7 +8,7 @@ function renderProduct(arr) {
         var productServer = arr[i]
         content += `
         <div class="col-12 col-sm-6 col-md-4">
-                <div class="product-card">
+                <div class="product-card" data-product-id="${productServer.id}">
                     <a href="#" class="product-card__link-overlay"></a>
                     <div class="product-card__image-box">
                         <img src="${productServer.image}" alt="shoes" class="product-card__image img-fluid">
@@ -25,6 +25,18 @@ function renderProduct(arr) {
     }
 
     document.querySelector('.products').innerHTML = content;
+
+    const productItems = document.querySelectorAll('.product-card');
+    console.log(productItems)
+
+    productItems.forEach((item) => {
+    item.addEventListener('click', () => {
+        const productId = item.getAttribute('data-product-id');
+        console.log(productId)
+        window.location.href = "./../Pages/detail-page.html"
+        getProductById(productId)
+    })
+})
 }
 
 // Hàm gọi API để lấy product
@@ -36,6 +48,7 @@ function getProduct() {
     })
 
     promise.then(function (res) {
+        console.log(res.data.content)
         renderProduct(res.data.content)
     })
 
@@ -47,9 +60,12 @@ function getProduct() {
 getProduct()
 
 // Hàm chuyển trang
-const redirectPage = function() {
+const redirectPage = function () {
     location.href = "./index.html"
 }
+
+// Hàm lấy và gắn event vào product item để chuyển đến trang product detail
+
 
 // Hàm đăng ký người dùng
 const signUp = function () {
@@ -69,7 +85,7 @@ const signUp = function () {
         console.log(res)
 
         toastBody.textContent = res.data.message;
-        
+
         toastContent.classList.add('text-black');
         toastContent.classList.add('bg-white');
 
@@ -82,18 +98,15 @@ const signUp = function () {
     promise.catch(function (err) {
         console.log(err)
 
-        if(err.message === 'Request failed with status code 400') {
+        if (err.message === 'Request failed with status code 400') {
             toastBody.textContent = `Email đã được sử dụng.`
-    
+
             toastContent.classList.add('text-white');
             toastContent.classList.add('bg-danger');
-        
+
             toast.show();
         }
     })
 }
 
-getEle('btnSignUp').addEventListener('click', signUp)
-
-
-
+getEle('btnSignUp').addEventListener("click", signUp)
