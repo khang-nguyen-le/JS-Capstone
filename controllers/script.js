@@ -46,6 +46,11 @@ function getProduct() {
 
 getProduct()
 
+// Hàm chuyển trang
+const redirectPage = function() {
+    location.href = "./index.html"
+}
+
 // Hàm đăng ký người dùng
 const signUp = function () {
     let user = getData();
@@ -71,6 +76,8 @@ const signUp = function () {
         toast.show();
 
         document.querySelector('.form').reset();
+
+        setTimeout(redirectPage, 2000);
     })
     promise.catch(function (err) {
         console.log(err)
