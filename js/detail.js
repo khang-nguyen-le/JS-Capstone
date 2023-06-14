@@ -5,7 +5,7 @@ function renderProductById(arr) {
     var contentRelatedPro = "";
 
     for (let i = 0; i < arr.size.length; i++) {
-        productSize += `<span class='product-card__size'>${arr.size[i]}</span>`
+        productSize += `<span class='product-card__detail'>${arr.size[i]}</span>`
         // console.log(arr.size[i]);
     }
 
@@ -48,21 +48,24 @@ function renderProductById(arr) {
                             <div class="product-card__size">                            
                             ${productSize} 
                             </div>
-                            <button>Add to bag</button>
-                            <button>Favourite</button>
-                            <p class="product-card__short-desc">${arr.description}</p>
-                            <p class="product-card__short-desc">Colour Shown: White/Black/White/Smoke Grey</p>
-                            <p class="product-card__short-desc">alias: ${arr.alias}</p>
-                            <p class="product-card__short-desc">quantity: ${arr.quantity}</p>
+                            <button class="btn-primary-dark">Add to bag</button>
+                            <button class="btn-secondary">Favourite</button>
+                            <ul>
+                            <li class="product-card__short-desc">* ${arr.description}</li>
+                            <li class="product-card__short-desc">* Colour Shown: White/Black/White/Smoke Grey</li>
+                            <li class="product-card__short-desc">* Alias: ${arr.alias}</li>
+                            <li class="product-card__short-desc">* Quantity: ${arr.quantity}</li>
+                            </ul>
                         </div>
                     </div>
+                    <div class="related_list row">
+                        <h2 class="related__product-category">
+                            You Might Also Like
+                        </h2>
+                        ${contentRelatedPro}
+                    </div>
                 </div>
-                <div class="related_list">
-                    <h1 class="related__product-category">
-                        You Might Also Like
-                    </h1>
-                    ${contentRelatedPro}
-                </div>`
+                `
         
     
 
