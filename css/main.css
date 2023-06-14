@@ -13,6 +13,7 @@
   --color-gray-12:#141414;
   --color-gray-13:#000000;
   --color-secondary: #9E3500;
+  --color-danger:#fe0000;
 }
 
 * {
@@ -56,6 +57,25 @@ body {
   font-size: 1.6rem;
 }
 
+.register__form-header {
+  text-align: center;
+}
+.register__logo {
+  height: 6rem;
+}
+.register__heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 2.8rem 0 2rem;
+  font-size: 24px;
+}
+.register__subheading {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: var(--color-gray-7);
+}
+
 .product-card {
   position: relative;
   margin-bottom: 1.5rem;
@@ -90,10 +110,13 @@ body {
   margin-top: 1rem;
 }
 
-.button:link, .button:visited {
+.button {
+  border: none;
+  cursor: pointer;
+}
+.button, .button:link, .button:visited {
   font-size: 1.4rem;
   padding: 0.6rem 2rem;
-  border-radius: 50px;
   display: inline-block;
   font-weight: 500;
   text-align: center;
@@ -101,6 +124,7 @@ body {
 .button--black {
   background-color: var(--color-gray-12);
   color: var(--color-gray-1);
+  border-radius: 50px;
 }
 .button--black:hover {
   color: var(--color-gray-1);
@@ -114,6 +138,7 @@ body {
 .button--outline {
   border: 1px solid var(--color-gray-6);
   color: var(--color-gray-12);
+  border-radius: 50px;
 }
 .button--outline:hover {
   color: var(--color-gray-12);
@@ -123,6 +148,45 @@ body {
 }
 .button--outline-1 {
   width: 50%;
+}
+.button--outline-rec {
+  border-radius: 3px;
+  width: 100%;
+  color: var(--color-gray-7);
+  height: 40px;
+  line-height: 27px;
+}
+.button--black-rec {
+  border-radius: 3px;
+  width: 100%;
+  height: 40px;
+}
+
+.btn-check:checked + .button--outline-rec {
+  color: var(--color-gray-12);
+  border-color: var(--color-gray-12);
+}
+
+.form {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 0 2.8rem;
+}
+.form-control {
+  font-family: inherit;
+  font-size: 1.4rem;
+  padding: 0 1.6rem;
+  height: 40px;
+  border-radius: 3px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--color-gray-12);
+  color: var(--color-gray-12);
+}
+.form-text {
+  color: var(--color-danger);
+  font-size: 1.2rem;
 }
 
 .header {
@@ -392,6 +456,7 @@ body {
   box-shadow: 0 0 0 0.25rem var(--color-gray-12);
 }
 
+<<<<<<< HEAD
 .section-product-detail {
   padding: 3.5rem;
 }
@@ -457,4 +522,8 @@ body {
   cursor: pointer;
   opacity: 0.7;
   border: 1px black solid;
+=======
+.section-register {
+  padding: 4rem 0;
+>>>>>>> master
 }/*# sourceMappingURL=main.css.map */
