@@ -36,10 +36,10 @@ function renderProductById(arr) {
     console.log(arr.id);
     content += `
         <div class="row detail_display">
-                    <div class="col-7 product-card__image-box">
+                    <div class="col-sm-12 col-md-7 col-12 product-card__image-box">
                         <img src="${arr.image}" alt="shoes" class="product-card__image img-fluid">
                     </div>
-                    <div class="col-5"> 
+                    <div class="col-sm-12 col-md-5 col-12"> 
                         <div class="product-card__info">
                             <h2 class="product-card__title">${arr.name}</h2>
                             <p class="product-card__subtitle">Men's Shoes</p>                            
