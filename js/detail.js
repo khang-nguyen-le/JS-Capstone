@@ -32,9 +32,9 @@ function renderProductById(arr) {
     let content = "";
 
     // for (var i = 0; i < arr.length; i++) {
-        // var productServer = arr[i];
-        console.log(arr.id);
-        content += `
+    // var productServer = arr[i];
+    console.log(arr.id);
+    content += `
         <div class="row detail_display">
                     <div class="col-7 product-card__image-box">
                         <img src="${arr.image}" alt="shoes" class="product-card__image img-fluid">
@@ -66,17 +66,14 @@ function renderProductById(arr) {
                     </div>
                 </div>
                 `
-        
-    
 
     document.getElementById('productById').innerHTML = content;
 }
 
 
 function getProductById(id) {
-    let urlLink = "https://shop.cyberlearn.vn/api/Product/getbyid?id=" + id;
     var promise = axios({
-        url: urlLink,
+        url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
         method: "GET",
         // responseType: "JSON"
     })
@@ -90,4 +87,7 @@ function getProductById(id) {
     })
 }
 
-// getProductById(1);
+const urlParams = new URLSearchParams(window.location.search);
+const idParam = urlParams.get('id');
+
+getProductById(idParam)
