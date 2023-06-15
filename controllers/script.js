@@ -9,7 +9,7 @@ function renderProduct(arr) {
         content += `
         <div class="col-12 col-sm-6 col-md-4">
                 <div class="product-card">
-                    <a href="#" class="product-card__link-overlay"></a>
+                    <a href="./../Pages/detail-page.html?id=${productServer.id}" class="product-card__link-overlay"></a>
                     <div class="product-card__image-box">
                         <img src="${productServer.image}" alt="shoes" class="product-card__image img-fluid">
                     </div>
@@ -36,6 +36,7 @@ function getProduct() {
     })
 
     promise.then(function (res) {
+        console.log(res.data.content)
         renderProduct(res.data.content)
     })
 
@@ -47,9 +48,16 @@ function getProduct() {
 getProduct()
 
 // Hàm chuyển trang
-const redirectPage = function() {
-    location.href = "./index.html"
+const redirectPage = function (link) {
+    if(link){
+        location.href = link;
+    }
+    else {
+        location.href = "./index.html";
+    }
 }
+// Hàm lấy và gắn event vào product item để chuyển đến trang product detail
+
 
 // Hàm đăng ký người dùng
 const signUp = function () {
@@ -69,8 +77,10 @@ const signUp = function () {
         console.log(res)
 
         toastBody.textContent = res.data.message;
-        
+
+        toastContent.classList.remove('text-white');
         toastContent.classList.add('text-black');
+        toastContent.classList.remove('bg-danger');
         toastContent.classList.add('bg-white');
 
         toast.show();
@@ -82,18 +92,15 @@ const signUp = function () {
     promise.catch(function (err) {
         console.log(err)
 
-        if(err.message === 'Request failed with status code 400') {
+        if (err.message === 'Request failed with status code 400') {
             toastBody.textContent = `Email đã được sử dụng.`
-    
+
             toastContent.classList.add('text-white');
             toastContent.classList.add('bg-danger');
-        
+
             toast.show();
         }
     })
 }
 
-getEle('btnSignUp').addEventListener('click', signUp)
-
-
-
+getEle('btnSignUp').addEventListener("click", signUp)
